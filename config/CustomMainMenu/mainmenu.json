@@ -46,11 +46,27 @@
             }
         },
 		
+		"OfficialServer":
+        {
+            "text" : "-- Official Server --",
+            "posX" : -100,
+            "posY" : 0,
+            "width" : 200,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "textures:gui/auto/longbutton.png",
+            "action" : 
+            {
+                "type" : "connectToServer",
+				"ip" : "mineout.pixelpals.org"
+            }
+        },
+		
 		"Changelog":
         {
             "text" : "Changelog",
             "posX" : -100,
-            "posY" : 0,
+            "posY" : 35,
             "width" : 200,
             "height" : 20,
 			"alignment" : "center",
@@ -66,7 +82,7 @@
         {
             "text" : "Mods",
             "posX" : -100,
-            "posY" : 25,
+            "posY" : 60,
             "width" : 98,
             "height" : 20,
 			"alignment" : "center",
@@ -81,7 +97,7 @@
         {
             "text" : "Options",
             "posX" : 2,
-            "posY" : 25,
+            "posY" : 60,
             "width" : 98,
             "height" : 20,
 			"alignment" : "center",
@@ -97,7 +113,7 @@
         {
             "text" : "menu.quit",
             "posX" : -100,
-            "posY" : 50,
+            "posY" : 85,
             "width" : 200,
             "height" : 20,
 			"alignment" : "center",
