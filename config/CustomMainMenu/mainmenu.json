@@ -1,28 +1,64 @@
 {
     "images":
     {
+		"menu_container":
+		{
+			"image" : "textures:gui/normal/menuback.png",
+			"posX" : 50,
+			"posY" : -200,
+			"width" : 175,
+			"height" : 768,
+			"alignment" : "bottom_left"
+		},
+		
+		"separator":
+		{
+			"image" : "textures:gui/large/separator.png",
+			"posX" : 64,
+			"posY" : -150,
+			"width" : 255,
+			"height" : 250,
+			"alignment" : "bottom_left"
+		},
+		
 		"modpack":
 		{
             "image" : "textures:gui/auto/mineout.png",
-            "posX" : -105,
-            "posY" : -105,
+            "posX" : -200,
+            "posY" : -150,
             "width" : 200,
-            "height" : 70,
-            "alignment" : "center"
+            "height" : 75,
+            "alignment" : "bottom_right"
 		}
     },
     
     "buttons":
     {
+		"official_server":
+        {
+            "text" : "-- Official Server --",
+            "posX" : 64,
+            "posY" : -175,
+            "width" : 150,
+            "height" : 20,
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/normal/button.png",
+            "action" : 
+            {
+                "type" : "connectToServer",
+				"ip" : "mineout.pixelpals.org"
+            }
+        },
+	
         "singleplayer":
         {
-            "text" : "menu.singleplayer",
-            "posX" : -100,
-            "posY" : -25,
-            "width" : 98,
+            "text" : "Solo",
+            "posX" : 64,
+            "posY" : -110,
+            "width" : 75,
             "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/shortbutton.png",
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/large/shortbutton.png",
             "action" : 
             {
                 "type" : "openGui",
@@ -30,78 +66,47 @@
             }
         },
 
-        "Multiplayer":
+        "multiplayer":
         {
             "text" : "menu.multiplayer",
-            "posX" : 2,
-            "posY" : -25,
-            "width" : 98,
+            "posX" : 139,
+            "posY" : -110,
+            "width" : 75,
             "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/shortbutton.png",
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/large/shortbutton.png",
             "action" : 
             {
                 "type" : "openGui",
 				"gui" : "multiplayer"
             }
         },
-		
-		"OfficialServer":
-        {
-            "text" : "-- Official Server --",
-            "posX" : -100,
-            "posY" : 0,
-            "width" : 200,
-            "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/longbutton.png",
-            "action" : 
-            {
-                "type" : "connectToServer",
-				"ip" : "mineout.pixelpals.org"
-            }
-        },
-		
-		"Changelog":
-        {
-            "text" : "Changelog",
-            "posX" : -100,
-            "posY" : 35,
-            "width" : 200,
-            "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/longbutton.png",
-            "action" : 
-            {
-                "type" : "openGui",
-				"gui" : "custom.changelogs"
-            }
-        },
-		
-        "Mods":
+
+        "mods":
         {
             "text" : "Mods",
-            "posX" : -100,
-            "posY" : 60,
-            "width" : 98,
+            "posX" : 64,
+            "posY" : -85,
+            "width" : 150,
             "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/shortbutton.png",
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/normal/button.png",
             "action" : 
             {
                 "type" : "openGui",
 				"gui" : "mods"
             }
         },
+		
         "options":
         {
             "text" : "Options",
-            "posX" : 2,
-            "posY" : 60,
-            "width" : 98,
+            "posX" : 64,
+            "posY" : -60,
+            "width" : 150,
             "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/shortbutton.png",
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/normal/button.png",
             "action" : 
             {
                 "type" : "openGui",
@@ -112,12 +117,12 @@
         "quit":
         {
             "text" : "menu.quit",
-            "posX" : -100,
-            "posY" : 85,
-            "width" : 200,
+            "posX" : 64,
+            "posY" : -35,
+            "width" : 150,
             "height" : 20,
-			"alignment" : "center",
-			"texture" : "textures:gui/auto/longbutton.png",
+			"alignment" : "bottom_left",
+			"texture" : "textures:gui/normal/button.png",
             "action" : 
             {
                 "type" : "quit"
@@ -127,8 +132,8 @@
         "refresh":
         {
             "text" : "",
-            "posX" : -20,
-            "posY" : 0,
+            "posX" : -30,
+            "posY" : 10,
             "width" : 20,
             "height" : 20,
 			"alignment" : "top_right",
@@ -137,9 +142,25 @@
             {
                 "type" : "refresh"
             }
+        },
+		
+		"changelogs":
+        {
+            "text" : "",
+            "posX" : -55,
+            "posY" : 10,
+            "width" : 20,
+            "height" : 20,
+			"alignment" : "top_right",
+            "texture" : "textures:gui/auto/changelog.png",
+            "action" : 
+            {
+                "type" : "openGui",
+				"gui" : "custom.changelogs"
+            }
         }
     },
-    
+	
     "texts":
     {
         "mojang":
@@ -171,13 +192,22 @@
             "alignment" : "bottom_right"
 		},
 		"modpack":{
-			"text" : "Mineout: The Wasteland v1.4 Build #1",
-            "posX" : -110,
+			"text" : "Mineout: The Wasteland v1.4",
+            "posX" : -85,
             "posY" : -31,
 			"fontSize" : .6,
             "color" : -1,
 			"hoverColor" : -1,
             "alignment" : "bottom_right"
+		},
+		"mainmenu_title":{
+			"text" : "Main Menu",
+            "posX" : 110,
+            "posY" : -132,
+			"fontSize" : 1.25,
+            "color" : -1,
+			"hoverColor" : -1,
+            "alignment" : "bottom_left"
 		},
 		"newsLine1":{
 			"text" : "",
